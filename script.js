@@ -73,7 +73,7 @@ export function aufgabe05(args) {
     }  
 
   export function aufgabe08(args) {
-    const input = args
+    const input = args //Dieser Knopf soll alle 'e' in einem Text mit '3' ersetzen
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -89,15 +89,13 @@ export function aufgabe05(args) {
   }
    
   export function aufgabe12(args) {
-    const input = args
+    const input = args //Dieser Button soll die Position des ersten 'e'  im Text finden
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
       return i
-    } else if (currentElement === 'E') {
-      return i
-    }
+    } 
   }
   return -1
     
