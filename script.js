@@ -49,6 +49,29 @@ export function aufgabe03(args) {
     return count
   }
 
+export function aufgabe05(args) {
+    const input = args
+      const result = []
+    let capitalLetters = 0
+     
+    for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //Prüft, ob ein Grossbuchstabe vorhanden ist
+    if (currentElement=== ".") {}
+    else if (currentElement===" "){}
+    //Wenn ein Element gleich ist, wird plus 1 gerechnet
+    else if (currentElement === currentElement.toUpperCase())
+    {capitalLetters++}
+    }
+     
+    if (capitalLetters > 0) {
+      return true
+    } else {
+       return false
+    }
+     
+    }  
+
   export function aufgabe08(args) {
     const input = args
   const result = []
@@ -65,5 +88,18 @@ export function aufgabe03(args) {
 
   }
    
-   
+  export function aufgabe12(args) {
+    const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      return i
+    } else if (currentElement === 'E') {
+      return i
+    }
+  }
+  return -1
+    
+  }
    
