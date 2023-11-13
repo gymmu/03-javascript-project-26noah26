@@ -116,7 +116,7 @@ export function aufgabe05(args) {
   }
 
   export function aufgabe12(args) {
-    const input = args //Dieser Button soll die Position des ersten 'e' im Text finden
+    const input = args //Diese Aufgabe soll die Position des ersten 'e' im Text finden
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -129,9 +129,9 @@ export function aufgabe05(args) {
   }
    
   export function aufgabe13(args) {
-    const input = args //Dieser Button soll die Position des letzten 'e' im Text finden
+    const input = args //Diese Aufgabe soll die Position des letzten 'e' im Text finden
   const result = []
-  for (let i = 0; i < input.length; i++) {
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
       return i
@@ -141,3 +141,15 @@ export function aufgabe05(args) {
     
   }
    
+  export function aufgabe14(args) {
+    const input = args //Diese Aufgabe soll die Position des dritten 'e' im Text finden
+  const result = []
+  for (let i = 3; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      return i
+    } 
+  }
+  return -1
+    
+  }
