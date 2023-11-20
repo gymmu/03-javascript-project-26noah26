@@ -144,12 +144,29 @@ export function aufgabe05(args) {
   export function aufgabe14(args) {
     const input = args //Diese Aufgabe soll die Position des dritten 'e' im Text finden
   const result = []
-  for (let i = 3; i < input.length; i++) {
+    let countE = 0
+  for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
-      return i
-    } 
+      countE++
+      if (countE === 3) {
+        return i
+      }
+    }
+   
   }
   return -1
     
+  }
+
+  export function aufgabe19(args) {
+    const input = args //Diese Aufgabe soll jedes Zeichen in der Aufgabe verdoppeln
+    const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+    
+  }
+    return result.join("")
   }
