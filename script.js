@@ -101,6 +101,28 @@ export function aufgabe05(args) {
     return false
    }
   }
+
+  export function aufgabe10(args) {
+    const input = args
+    
+    if (input.length !== 7) return false
+    if (input[0] !== "#") return false
+
+    for (let i = 1; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt(0)
+      if (48 <= ascii && ascii <= 57) {
+       } else if (65 <= ascii && ascii <= 70) {
+       }   else {
+            return false
+        
+        
+      }
+      
+    }
+
+    return true
+  }
   
   export function aufgabe11 (args) {
     const input = args
@@ -159,6 +181,13 @@ export function aufgabe05(args) {
     
   }
 
+  export function aufgabe18(args) {
+    const input = args //Diese Aufgabe soll den Namen und das Alter angeben.
+    const result = []
+    
+    return result.join("")
+  }
+
   export function aufgabe19(args) {
     const input = args //Diese Aufgabe soll jedes Zeichen in der Aufgabe verdoppeln
     const result = []
@@ -168,5 +197,12 @@ export function aufgabe05(args) {
     result.push(currentElement)
     
   }
+    return result.join("")
+  }
+
+  export function aufgabe20(args) {
+    const input = args
+    const result = []
+    
     return result.join("")
   }
