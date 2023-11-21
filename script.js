@@ -1,5 +1,5 @@
 export function aufgabe01(args) {
-  const input = args
+  const input = args //Diese Aufgabe soll aus der Eingabe alle 'e' löschen.
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -16,12 +16,12 @@ export function aufgabe01(args) {
 }
 
 export function aufgabe02(args) {
-  const input = args
+  const input = args//Diese Aufgabe soll den Input in Grossbuchstaben umwandeln.
   const result = []
 
   for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
-     //Der Input soll in Grossbuchstaben umgewandelt werden
+
      const capitalizedElement = currentElement.toUpperCase()
      result.push(capitalizedElement)
   }
@@ -30,18 +30,18 @@ export function aufgabe02(args) {
 }
 
 export function aufgabe03(args) {
-  const input = args
+  const input = args //Diese Aufgabe soll alle 'e' des Inputs zählen.
   const result = []
     let count = 0
    
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      //Der Input soll nur ein 'e' enthalten
+      //Der Input soll kleine 'e' zählen.
   if (currentElement === 'e'){
     count = count + 1
   }
    
-    //Der Input soll grosse 'E' zählen
+    //Der Input soll grosse 'E' zählen.
   else if (currentElement === 'E'){
     count = count + 1
   }
@@ -49,8 +49,8 @@ export function aufgabe03(args) {
     return count
   }
 
-export function aufgabe05(args) {
-    const input = args
+  export function aufgabe05(args) {
+    const input = args //Diese Aufgabe soll prüfen, ob ein Grossbuchstabe vorhanden ist.
       const result = []
     let capitalLetters = 0
      
@@ -72,6 +72,49 @@ export function aufgabe05(args) {
      
     }  
 
+    export function aufgabe06(args) {
+      const input = args; //Diese Aufgabe soll testen, ob in der Eingabe ein Sonderzeichen vorkommt.
+   
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i] ;
+      const ascii = currentElement.charCodeAt(0)
+   
+      if (65 <= ascii && ascii <= 90) {
+        //Prüft, ob es sich hier um einen Grossbuchstaben handelt.
+      } else if (97 <= ascii && ascii <=122) {
+        //Prüft, ob es sich hier um einen Kleinbuchstaben handelt.
+      } else if (currentElement === ' ') {
+      }else {
+        return true
+      }
+    }
+    return false
+  }
+
+  export function aufgabe07(args) {
+    const input = args //Diese Aufgabe soll prüfen, ob das Wort 'und' vorhanden ist.
+    const result = []
+   
+    let capitalLetters = 0
+     
+    for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+    if (currentElement=== ".") {}
+    else if (currentElement===" "){}
+     
+    else if (currentElement === currentElement.toUpperCase())
+    {capitalLetters++}
+    }
+     
+    if (capitalLetters > 0) {
+      return true
+    } else {
+       return false
+    }
+  }
+     
+
   export function aufgabe08(args) {
     const input = args //Dieser Knopf soll alle 'e' in einem Text mit '3' ersetzen
   const result = []
@@ -89,7 +132,7 @@ export function aufgabe05(args) {
   }
 
   export function aufgabe09(args) {
-    const input = args
+    const input = args //Diese Aufgabe soll prüfen, ob die Eingabe genau sechs Zeichen lang ist.
     let len = 0
     for (let i = 0; i < input.length; i++) {
     len++
@@ -103,7 +146,7 @@ export function aufgabe05(args) {
   }
 
   export function aufgabe10(args) {
-    const input = args
+    const input = args //Diese Aufgabe soll prüfen, ob die Eingabe ein korrekter RGB Hexcode ist.
     
     if (input.length !== 7) return false
     if (input[0] !== "#") return false
@@ -125,7 +168,7 @@ export function aufgabe05(args) {
   }
   
   export function aufgabe11 (args) {
-    const input = args
+    const input = args //Diese Aufgabe soll den ascii Code eines einzelnen Buchstaben angeben.
     let ascii = null
   if (input.length > 1){ return null} //Funktionswächter
    
