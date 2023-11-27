@@ -224,6 +224,22 @@ export function aufgabe03(args) {
     
   }
 
+  export function aufgabe15(args) {
+    const input = args
+    const result = []
+ 
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+ 
+  if (currentElement=== ' ' ) {
+  return result.join("")
+  }
+ 
+      result.push(currentElement)
+  }
+    return result.join("")
+  }
+
   export function aufgabe18(args) {
     const input = args //Diese Aufgabe soll den Namen und das Alter angeben.
     const result = []
@@ -244,8 +260,51 @@ export function aufgabe03(args) {
   }
 
   export function aufgabe20(args) {
+    const input = args;
+     
+    for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    const nextElement = input[i + i];
+
+      if (currentElement === '.' && nextElement !== " ") {
+        return false;
+      }
+       
+    }
+    return true
+  }
+
+  export function aufgabe22(args) {
     const input = args
     const result = []
     
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === '') {
+        result.push("1")
+      } 
+      else {
+      result.push(currentElement)
+      }
+    }
+
     return result.join("")
+  }
+
+  export function aufgabe27(args) {
+    const input = args
+    if (input.length === 0) return false
+   
+   
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      const ascii = currentElement.charCodeAt (0)
+      if(48 <= ascii && ascii <= 57) {
+        // mache nichts; ist eine Zahl
+      } else {
+        return false
+      }
+   
+    }
+    return true
   }
