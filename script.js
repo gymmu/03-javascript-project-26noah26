@@ -259,19 +259,22 @@ export function aufgabe03(args) {
     return result.join("")
   }
 
-  export function aufgabe20(args) {
-    const input = args;
-     
+  export function aufgabe20 (args) {
+    const input = args
+    const result = []
+   
     for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i];
-    const nextElement = input[i + i];
-
-      if (currentElement === '.' && nextElement !== " ") {
-        return false;
-      }
-       
+      const currentElement = input[i]
+      
+    if (currentElement === '.' )  
+    if (input [i+1] === ' ') {
+      return true
     }
-    return true
+     
+    }
+   
+  return false
+   
   }
 
   export function aufgabe22(args) {
