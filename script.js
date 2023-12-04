@@ -294,20 +294,59 @@ export function aufgabe03(args) {
     return result.join("")
   }
 
+  export function aufgabe26 (args) {
+   
+    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+        // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+        const tmp = list[i+1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = 0 // starte von vorne wenn etwas vertauscht wurde.
+      }
+    }
+    const result = list.join("")
+    return (result)
+   
+  }
+
   export function aufgabe27(args) {
     const input = args
+
     if (input.length === 0) return false
-   
-   
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       const ascii = currentElement.charCodeAt (0)
       if(48 <= ascii && ascii <= 57) {
-        // mache nichts; ist eine Zahl
+    
       } else {
         return false
       }
    
     }
     return true
+  }
+
+  export function bubbleSort (args) { //Diese Aufgabe soll die Elemente der Eingabe alphabetisch oder der Grösse nach ordnen
+ 
+    const list = args.split("") 
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const nextElement = list[i+1]
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      
+   
+        const tmp = list[i+1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = -1 
+      }
+   
+   
+    }
+    const result = list.join("")
+    return result
   }
