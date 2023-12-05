@@ -1,5 +1,5 @@
-export function aufgabe01(args) {
-  const input = args //Diese Aufgabe soll aus der Eingabe alle 'e' löschen.
+export function aufgabe01(args) {//Diese Aufgabe soll aus der Eingabe alle 'e' löschen.
+  const input = args 
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -15,22 +15,22 @@ export function aufgabe01(args) {
   return result.join("")
 }
 
-export function aufgabe02(args) {
-  const input = args//Diese Aufgabe soll den Input in Grossbuchstaben umwandeln.
+export function aufgabe02(args) {//Diese Aufgabe soll den Input in Grossbuchstaben umwandeln.
+  const input = args
   const result = []
 
   for (let i = 0; i < input.length; i++) {
      const currentElement = input[i]
 
-     const capitalizedElement = currentElement.toUpperCase()
+     const capitalizedElement = currentElement.toUpperCase()//Hier sollen die Buchstaben gross gemacht werden.
      result.push(capitalizedElement)
   }
 
   return result.join("")
 }
 
-export function aufgabe03(args) {
-  const input = args //Diese Aufgabe soll alle 'e' des Inputs zählen.
+export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zählen.
+  const input = args 
   const result = []
     let count = 0
    
@@ -40,7 +40,6 @@ export function aufgabe03(args) {
   if (currentElement === 'e'){
     count = count + 1
   }
-   
     //Der Input soll grosse 'E' zählen.
   else if (currentElement === 'E'){
     count = count + 1
@@ -49,8 +48,8 @@ export function aufgabe03(args) {
     return count
   }
 
-  export function aufgabe05(args) {
-    const input = args //Diese Aufgabe soll prüfen, ob ein Grossbuchstabe vorhanden ist.
+  export function aufgabe05(args) {//Diese Aufgabe soll prüfen, ob ein Grossbuchstabe vorhanden ist.
+    const input = args 
       const result = []
     let capitalLetters = 0
      
@@ -91,8 +90,8 @@ export function aufgabe03(args) {
     return false
   }
 
-  export function aufgabe07(args) {
-    const input = args //Diese Aufgabe soll prüfen, ob das Wort 'und' vorhanden ist.
+  export function aufgabe07(args) {//Diese Aufgabe soll prüfen, ob das Wort 'und' vorhanden ist.
+    const input = args 
     const result = []
    
     let capitalLetters = 0
@@ -115,24 +114,24 @@ export function aufgabe03(args) {
   }
      
 
-  export function aufgabe08(args) {
-    const input = args //Dieser Knopf soll alle 'e' in einem Text mit '3' ersetzen
+  export function aufgabe08(args) {//Dieser Knopf soll alle 'e' in einem Text mit '3' ersetzen
+    const input = args 
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'e') {
-      result.push("3")
+    if (currentElement === 'e') {//Hier soll erkannt werden, ob das Element ein e ist.
+      result.push("3")//Wenn es ein e ist, soll es durch eine 3 ersetzt werden.
     } 
     else {
-    result.push(currentElement)
+    result.push(currentElement)//Wenn es kein e ist, soll nichts geschehen.
     }
   }
   return result.join("")
 
   }
 
-  export function aufgabe09(args) {
-    const input = args //Diese Aufgabe soll prüfen, ob die Eingabe genau sechs Zeichen lang ist.
+  export function aufgabe09(args) {//Diese Aufgabe soll prüfen, ob die Eingabe genau sechs Zeichen lang ist.
+    const input = args 
     let len = 0
     for (let i = 0; i < input.length; i++) {
     len++
@@ -145,8 +144,8 @@ export function aufgabe03(args) {
    }
   }
 
-  export function aufgabe10(args) {
-    const input = args //Diese Aufgabe soll prüfen, ob die Eingabe ein korrekter RGB Hexcode ist.
+  export function aufgabe10(args) {//Diese Aufgabe soll prüfen, ob die Eingabe ein korrekter RGB Hexcode ist.
+    const input = args 
     
     if (input.length !== 7) return false
     if (input[0] !== "#") return false
@@ -294,18 +293,17 @@ export function aufgabe03(args) {
     return result.join("")
   }
 
-  export function aufgabe26 (args) {
+  export function aufgabe26 (args) {//Diese Aufgabe soll die ersten beiden Zeichen der Eingabe alphanumerisch sortieren.
    
-    const list = args.split("")  // Damit wandeln wir den Text in eine Liste um, das brauchen wir wenn wir Elemente vertauschen möchten.
+    const list = args.split("")  //Der Text wird in eine Liste umgewandelt, damit er sortiert werden kann.
     for (let i = 0; i < list.length - 1; i++) {
       const currentElement = list[i]
       const nextElement = list[i+1]
-      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-        // Reihenfolge stimmt nicht, Elemente müssen getauscht werden.
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {//Wenn die Reihenfolge nicht stimmt, müssen die beiden Elemente getauscht werden.
         const tmp = list[i+1]
         list[i+1] = list[i]
         list[i] = tmp
-        i = 0 // starte von vorne wenn etwas vertauscht wurde.
+        i = 0 //Wenn die zwei Elemente vertauscht wurden, startet es neu.
       }
     }
     const result = list.join("")
