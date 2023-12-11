@@ -3,13 +3,13 @@ export function aufgabe01(args) {//Diese Aufgabe soll aus der Eingabe alle 'e' l
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'e') {
+    if (currentElement === 'e') {//Ein e wird erkannt
       result.push("")
-    } else if (currentElement === 'E') {
+    } else if (currentElement === 'E') {//Ein E wird erkannt
       result.push("") 
     }
     else {
-    result.push(currentElement)
+    result.push(currentElement)//Wenn kein e da ist, geht der Computer weiter und das Element kommt im Output vor.
     }
   }
   return result.join("")
@@ -23,7 +23,7 @@ export function aufgabe02(args) {//Diese Aufgabe soll den Input in Grossbuchstab
      const currentElement = input[i]
 
      const capitalizedElement = currentElement.toUpperCase()//Hier sollen die Buchstaben gross gemacht werden.
-     result.push(capitalizedElement)
+     result.push(capitalizedElement)//Alle Grossbuchstaben sollen im Output landen.
   }
 
   return result.join("")
@@ -36,40 +36,42 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
    
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      //Der Input soll kleine 'e' zählen.
-  if (currentElement === 'e'){
-    count = count + 1
+  if (currentElement === 'e'){ //Erkennt e
+    count = count + 1 //Zählt e
   }
-    //Der Input soll grosse 'E' zählen.
-  else if (currentElement === 'E'){
-    count = count + 1
+    
+  else if (currentElement === 'E'){ //Erkennt E
+    count = count + 1 //Zählt E
   }
     }
-    return count
+    return count //Im Output soll die Anzahl der gezählten e/E angezeigt werden
   }
 
-  export function aufgabe05(args) {//Diese Aufgabe soll prüfen, ob ein Grossbuchstabe vorhanden ist.
-    const input = args 
+  
+    export function aufgabe05(args) {
+      const input = args
       const result = []
-    let capitalLetters = 0
+      let capitalLetters = 0
      
-    for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    //Prüft, ob ein Grossbuchstabe vorhanden ist
-    if (currentElement=== ".") {}
-    else if (currentElement===" "){}
-    //Wenn ein Element gleich ist, wird plus 1 gerechnet
-    else if (currentElement === currentElement.toUpperCase())
-    {capitalLetters++}
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input [i]
+        if (currentElement === ".") { //Erkennt '.'
+     
+        } else if (currentElement === " ") {} //Erkennt Leerschläge
+     
+        
+        else if (currentElement !== currentElement.toLowerCase()) {} //Erkennt Gross- und Kleinbuchstaben
+          capitalLetters++
+        
+      }
+     
+      if (capitalLetters> 0) { //Zeigt nur die Grossbuchstaben im Output an
+        return true
+      }else {
+        return false
+      }
+     
     }
-     
-    if (capitalLetters > 0) {
-      return true
-    } else {
-       return false
-    }
-     
-    }  
 
     export function aufgabe06(args) {
       const input = args; //Diese Aufgabe soll testen, ob in der Eingabe ein Sonderzeichen vorkommt.
