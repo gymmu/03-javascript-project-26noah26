@@ -1,4 +1,4 @@
-# Easycode
+ # Easycode
 
 Einfaches Repository um Javascript zu lernen.
 
@@ -21,7 +21,7 @@ Zähle alle Wörter in einem Text.
 ## Aufgabe 05
 
 Schreibe eine Funktion, die testet, ob in einem Text mindestens ein
-Grossbuchstabe vorkommt.
+Grossbuchstabe vorkommt.  
 
 ## Aufgabe 06
 
