@@ -121,11 +121,11 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'e') {//Hier soll erkannt werden, ob das Element ein e ist.
+    if (currentElement === 'e') {//Erkennt e
       result.push("3")//Wenn es ein e ist, soll es durch eine 3 ersetzt werden.
     } 
     else {
-    result.push(currentElement)//Wenn es kein e ist, soll nichts geschehen.
+    result.push(currentElement)//Wenn es kein e ist, bleibt das Element gleich und wird im Output angezeigt.
     }
   }
   return result.join("")
@@ -134,14 +134,14 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
 
   export function aufgabe09(args) {//Diese Aufgabe soll prüfen, ob die Eingabe genau sechs Zeichen lang ist.
     const input = args 
-    let len = 0
+    let len = 0 //Fängt bei null an zu zählen
     for (let i = 0; i < input.length; i++) {
     len++
     }
 
-   if (len === 6) {
+   if (len === 6) {//Bei einer Input-Länge von 6 Zeichen stehtt im Output true.
     return true
-   } else {
+   } else {//Bei einer Input-Länge von mehr/weniger als 6 zeichen steht im Output false.
     return false
    }
   }
@@ -150,7 +150,7 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
     const input = args 
     
     if (input.length !== 7) return false
-    if (input[0] !== "#") return false
+    if (input[0] !== "#") return false 
 
     for (let i = 1; i < input.length; i++) {
       const currentElement = input[i]
@@ -186,11 +186,11 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    if (currentElement === 'e') {
-      return i
+    if (currentElement === 'e') {//Erkennt e
+      return i//
     } 
   }
-  return -1
+  return -1 //Die Position des ersten e minus 1 wird im Output angezeigt
     
   }
    
@@ -200,7 +200,7 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
   for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
-      return i
+      return i //Position des letzten e steht im Output
     } 
   }
   return -1
@@ -211,11 +211,11 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
     const input = args //Diese Aufgabe soll die Position des dritten 'e' im Text finden
   const result = []
     let countE = 0
-  for (let i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {//Bei jedem e zählt der Computer +1
     const currentElement = input[i]
     if (currentElement === 'e') {
       countE++
-      if (countE === 3) {
+      if (countE === 3) {//Wenn 3 e gefunden wurde, wir ddie Position des dritten angegeben
         return i
       }
     }
@@ -225,50 +225,50 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
     
   }
 
-  export function aufgabe15(args) {
+  export function aufgabe15(args) {//Liest die Eingabe nur bis zum ersten Leerschlag ein.
     const input = args
     const result = []
  
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
  
-  if (currentElement=== ' ' ) {
+  if (currentElement=== ' ' ) {//Erkennt Leerschlag
   return result.join("")
   }
  
-      result.push(currentElement)
+      result.push(currentElement)//Gibt den Output bis zum ersten Leerschlag zurück
   }
     return result.join("")
   }
 
-  export function aufgabe18(args) {
-    const input = args //Diese Aufgabe soll den Namen und das Alter angeben.
+  export function aufgabe18(args) {//Diese Aufgabe soll den Namen und das Alter angeben.
+    const input = args 
     const result = []
     
     return result.join("")
   }
 
-  export function aufgabe19(args) {
-    const input = args //Diese Aufgabe soll jedes Zeichen in der Aufgabe verdoppeln
+  export function aufgabe19(args) {//Diese Aufgabe soll jedes Zeichen in der Aufgabe verdoppeln
+    const input = args 
     const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     result.push(currentElement)
-    result.push(currentElement)
+    result.push(currentElement)//Fügt das Element doppelt in den Output
     
   }
     return result.join("")
   }
 
-  export function aufgabe20 (args) {
+  export function aufgabe20 (args) {//Prüft, ob nach jedem . ein Leerschlag kommt
     const input = args
     const result = []
    
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       
-    if (currentElement === '.' )  
-    if (input [i+1] === ' ') {
+    if (currentElement === '.' ) //Erkennt '.'
+    if (input [i+1] === ' ') {//Prüft, ob eine Position nach dem . ein Lerschlag kommt.
       return true
     }
      
@@ -313,40 +313,40 @@ export function aufgabe03(args) {//Diese Aufgabe soll alle 'e' des Inputs zähle
    
   }
 
-  export function aufgabe27(args) {
+  export function aufgabe27(args) {//Testet ob die Eingabe eine Zahl ist
     const input = args
 
     if (input.length === 0) return false
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       const ascii = currentElement.charCodeAt (0)
-      if(48 <= ascii && ascii <= 57) {
+      if(48 <= ascii && ascii <= 57) {//Prüft, ob das Element eine Zahl zwischen 0 und 9 ist
     
       } else {
-        return false
+        return false//Keine Zahl --> return false
       }
    
     }
-    return true
+    return true//Zahl gefunden
   }
 
   export function bubbleSort (args) { //Diese Aufgabe soll die Elemente der Eingabe alphabetisch oder der Grösse nach ordnen
  
-    const list = args.split("") 
+    const list = args.split("") //Erstellt eine Liste mit den Elementen
     for (let i = 0; i < list.length - 1; i++) {
       const currentElement = list[i]
       const nextElement = list[i+1]
-      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {//Wenn die Reihenfolge falsch ist, werden die Elemente vertauscht
       
    
         const tmp = list[i+1]
         list[i+1] = list[i]
         list[i] = tmp
-        i = -1 
+        i = -1 //Überprüft und tauscht so lange, bis die reihenfolge stimmt
       }
    
    
     }
     const result = list.join("")
-    return result
+    return result //Im Output erscheint die sortierte Liste
   }
